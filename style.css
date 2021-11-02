@@ -1,0 +1,158 @@
+/* -------------
+GLobal Setting
+------------- */
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  --paragraph: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+
+  --header: 700;
+  --text: 400;
+}
+
+/* ----------
+    Reset
+---------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 15px;
+}
+
+.attribution {
+  font-size: 15px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+a {
+  text-decoration: none;
+}
+/* ------------
+    content
+------------ */
+.container {
+  max-width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto 50px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card {
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+}
+
+.card-content {
+  width: 20%;
+  padding: 53px;
+  line-height: 2;
+}
+
+.sedans {
+  background-color: var(--Bright-orange);
+  flex: 1;
+}
+
+.sedans .card-btn a.card-link {
+  color: var(--Bright-orange);
+}
+
+.suvs {
+  flex: 1;
+  background-color: var(--Dark-cyan);
+}
+
+.suvs .card-btn a.card-link {
+  color: var(--Dark-cyan);
+}
+
+.luxury {
+  flex: 1;
+  background-color: var(--Very-dark-cyan);
+}
+
+.luxury .card-btn a.card-link {
+  color: var(--Very-dark-cyan);
+}
+
+.header {
+  font-weight: var(--header);
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+  margin: 10px 0 20px 0;
+}
+
+.text {
+  font-weight: var(--text);
+  font-family: 'Lexend Deca', sans-serif;
+  line-height: 1.6;
+  color: var(--paragraph);
+}
+
+.card-btn {
+  background-color: white;
+  margin-top: 80px;
+  border-radius: 40px;
+  border: 2px solid transparent;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-family: 'Lexend Deca', sans-serif;
+  cursor: pointer;
+}
+
+.card-link {
+  font-weight: var(--text);
+}
+
+.card-btn a.card-link:hover {
+  color: var(--paragraph);
+}
+
+.card-img {
+  width: 50px;
+}
+
+.card-btn:hover {
+  background-color: transparent;
+  border: 2px solid var(--paragraph);
+}
+
+/* --------------
+    Responsive
+-------------- */
+@media (max-width: 375px) {
+  .container {
+    max-width: 90%;
+  }
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .card-content {
+    width: 100%;
+  }
+  .card-btn {
+    margin-top: 20px;
+  }
+}
